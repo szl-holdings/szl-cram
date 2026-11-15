@@ -1,0 +1,148 @@
+{
+  "data": {
+    "n_train9": 600,
+    "n_test9": 150
+  },
+  "t": "2026-11-15T14:29:01.135096+00:00",
+  "fit9": {
+    "fit_sec": 7.606,
+    "n_params": 131949,
+    "threshold": -208.2499237060547,
+    "train_thr_note": "40-epoch fit per train_eval protocol",
+    "threshold60": -70.40059661865234,
+    "thresholdh": 0.05000000074505806
+  },
+  "stage": "done",
+  "cfgA9_final": {
+    "exact": 0.0,
+    "valid": 0.0,
+    "search_sec": 234.33,
+    "quorum_exact": 0.0,
+    "quorum_valid": 0.0
+  },
+  "cfgB9": {
+    "chunks_done": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "agg": {
+      "exact_n": 1,
+      "valid_n": 1,
+      "sec": 695.476752281189,
+      "n": 150
+    }
+  },
+  "cfgB9_final": {
+    "exact": 0.006666666666666667,
+    "valid": 0.006666666666666667,
+    "exact_n": 1,
+    "valid_n": 1,
+    "n": 150,
+    "search_sec": 695.48
+  },
+  "interp9": {
+    "peer_pairs": 1620,
+    "argmax_on_diagonal_frac": 1.0,
+    "mean_diag_cost": 2.1119,
+    "min_offdiag_cost": -0.5506,
+    "note": "min_offdiag_cost < 0 implies off-diagonal reward entries (decoy-minima substrate)"
+  },
+  "cfgB60": {
+    "chunks_done": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "agg": {
+      "exact_n": 0,
+      "valid_n": 0,
+      "sec": 161.83558917045593,
+      "n": 150
+    }
+  },
+  "cfgB60_final": {
+    "exact": 0.0,
+    "valid": 0.0,
+    "exact_n": 0,
+    "valid_n": 0,
+    "n": 150,
+    "search_sec": 161.84
+  },
+  "handset9_mfa": {
+    "chunks_done": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "agg": {
+      "exact_n": 13,
+      "valid_n": 13,
+      "sec": 1032.0124230384827,
+      "n": 150
+    }
+  },
+  "handset9_mfa_final": {
+    "exact": 0.08666666666666667,
+    "valid": 0.08666666666666667,
+    "exact_n": 13,
+    "valid_n": 13,
+    "n": 150,
+    "search_sec": 1032.01
+  },
+  "err_handset": "                                                                                                                                                                                            ^^^^^^^^^^^^^^^^^\n  File \"C:\\SZL\\cram-study\\grid2.py\", line 119, in stage_hand\n    eval_chunked(mh, d['test_puz'], d['test_sol'], thrh, 'handset9_gibbs', fn='search', extra=dict(chains=4, beta_start=0.7, beta_end=4.0, max_sweeps=200, noise=1.0, polish_sweeps=0, mix_pol=0.0, quorum=True))\n  File \"C:\\SZL\\cram-study\\grid2.py\", line 62, in eval_chunked\n    ans, qans, E = (getattr(m, fn)(p, **kw) if fn == 'search_mfa' else m.search(p, **kw))\n                                                                       ^^^^^^^^^^^^^^^^^\nTypeError: CramSudoku.search() got an unexpected keyword argument 'polish_sweeps'\n",
+  "p16": {
+    "error": "FileNotFoundError(2, 'No such file or directory')",
+    "fit_done": false
+  },
+  "total_note": "grid2 resume-aware; deaths only lose the current chunk",
+  "handset9_gibbs": {
+    "chunks_done": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "agg": {
+      "exact_n": 4,
+      "valid_n": 4,
+      "sec": 97.60455274581909,
+      "n": 150
+    }
+  },
+  "handset9_gibbs_final": {
+    "exact": 0.02666666666666667,
+    "valid": 0.02666666666666667,
+    "exact_n": 4,
+    "valid_n": 4,
+    "n": 150,
+    "search_sec": 97.6
+  }
+}
