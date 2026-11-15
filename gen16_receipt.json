@@ -1,0 +1,15 @@
+{
+  "stage": "done16",
+  "t": "2026-11-15T15:17:11.869939+00:00",
+  "method": "pattern_permuted_valid_grid",
+  "seed": 26111731,
+  "n": 16,
+  "box": 4,
+  "n_train": 250,
+  "n_test": 30,
+  "clues16_min": 120,
+  "clues16_mean": 120.0,
+  "clues16_max": 120,
+  "sec": 29.7,
+  "dataset_sha256": "60bef0e0f06d433e8e2aef4e797597636e71d65e322fe666587c544ac5b70cf0"
+}

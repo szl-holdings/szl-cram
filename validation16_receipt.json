@@ -1,0 +1,161 @@
+{
+  "schema": "szl.cram-p16-validation/v1",
+  "method": "independent corrected zero-mask uniqueness checker",
+  "n_test": 30,
+  "all_unique": true,
+  "all_solution_valid": true,
+  "rows": [
+    {
+      "index": 0,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 1,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 2,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 3,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 4,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 5,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 6,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 7,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 8,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 9,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 10,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 11,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 12,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 13,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 14,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 15,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 16,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 17,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 18,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 19,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 20,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 21,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 22,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 23,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 24,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 25,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 26,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 27,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 28,
+      "solutions": 1,
+      "solution_valid": true
+    },
+    {
+      "index": 29,
+      "solutions": 1,
+      "solution_valid": true
+    }
+  ],
+  "sec": 5.719,
+  "t": "2026-11-15T15:26:50.870363+00:00"
+}
