@@ -1,0 +1,21 @@
+{
+  "hand_mfa": {
+    "exact": 0,
+    "quorum_exact": 0,
+    "n": 10,
+    "sec": 47.44,
+    "E_max": 6.0
+  },
+  "learned600_mfa": {
+    "fit_sec": 21.47,
+    "thr": -208.2499237060547,
+    "solE_test_mean": -214.14205932617188,
+    "exact": 0,
+    "quorum_exact": 0,
+    "sec": 64.74,
+    "E_best_mean": -209.4117431640625,
+    "below_solutionE": 0
+  },
+  "ok": true,
+  "t": "2026-11-15T08:32:08.984453+00:00"
+}

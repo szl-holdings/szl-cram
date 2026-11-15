@@ -1,0 +1,21 @@
+{
+  "hand_mix": {
+    "exact": 3,
+    "quorum_exact": 0,
+    "n": 10,
+    "sec": 117.02,
+    "E_max": 6.0
+  },
+  "learned600": {
+    "fit_sec": 15.9,
+    "thr": -208.2499237060547,
+    "solE_test_mean": -214.14205932617188,
+    "exact": 0,
+    "quorum_exact": 0,
+    "sec": 107.29,
+    "E_best_mean": -163.57493591308594,
+    "below_solutionE": 0
+  },
+  "ok": true,
+  "t": "2026-11-15T08:24:54.599894+00:00"
+}
