@@ -1,0 +1,58 @@
+{
+  "stage": "r5_designed_energy",
+  "problem": {
+    "containers": 32,
+    "gpus": 8,
+    "conflict_edges": 94,
+    "degree": 3
+  },
+  "energy": {
+    "unique_weights": 1,
+    "trained_params": 0,
+    "form": "hand-set pairwise: cost=1 iff same GPU on anti-affinity edge"
+  },
+  "certificate": {
+    "answer": [
+      0,
+      1,
+      0,
+      4,
+      3,
+      5,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      4,
+      2,
+      1,
+      1,
+      1,
+      0,
+      3,
+      0,
+      3,
+      2,
+      2,
+      5,
+      3,
+      2,
+      2,
+      3,
+      2,
+      1,
+      2
+    ],
+    "E_final": 0.0,
+    "threshold": 0.0,
+    "margin": 0.0,
+    "sweeps": 0,
+    "chain": 0,
+    "valid": true
+  },
+  "search_sec": 0.01,
+  "t": "2026-11-15T09:05:28.796001+00:00"
+}

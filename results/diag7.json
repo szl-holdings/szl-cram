@@ -1,0 +1,250 @@
+{
+  "fit_sec": 20.5,
+  "thr": -239.54017639160156,
+  "solE_per_puzzle": [
+    -241.38,
+    -242.37,
+    -241.02,
+    -243.22,
+    -242.42,
+    -242.16,
+    -242.59,
+    -243.77,
+    -244.35,
+    -243.65
+  ],
+  "mfa_sec": 153.09,
+  "mfa_exact": 0,
+  "ils_sec": 72.64,
+  "rounds": 40,
+  "kick": 6,
+  "exact": 0,
+  "E_best_per_puzzle": [
+    -234.01,
+    -236.84,
+    -236.99,
+    -234.44,
+    -237.89,
+    -237.68,
+    -237.72,
+    -234.46,
+    -239.26,
+    -238.74
+  ],
+  "gap_per_puzzle": [
+    7.37,
+    5.53,
+    4.03,
+    8.77,
+    4.53,
+    4.49,
+    4.87,
+    9.31,
+    5.09,
+    4.91
+  ],
+  "traj": [
+    {
+      "round": 0,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 1,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 2,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 3,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 4,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 5,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 6,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 7,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 8,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 9,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 10,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 11,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 12,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 13,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 14,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 15,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 16,
+      "exact": 0,
+      "gap_mean": 5.97
+    },
+    {
+      "round": 17,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 18,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 19,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 20,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 21,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 22,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 23,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 24,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 25,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 26,
+      "exact": 0,
+      "gap_mean": 5.94
+    },
+    {
+      "round": 27,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 28,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 29,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 30,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 31,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 32,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 33,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 34,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 35,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 36,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 37,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 38,
+      "exact": 0,
+      "gap_mean": 5.89
+    },
+    {
+      "round": 39,
+      "exact": 0,
+      "gap_mean": 5.89
+    }
+  ],
+  "ok": true,
+  "t": "2026-11-15T09:26:39.160113+00:00"
+}

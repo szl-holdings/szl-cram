@@ -1,0 +1,61 @@
+{
+  "schema": "szl.study-receipt/v1",
+  "study": "cram-2611-17309",
+  "paper": {"arxiv": "2611.17309", "title": "Classical Energies Learn to Reason 1,000x Faster than Looped Models", "authors": "Hoover, Blayney, Whittington (Prefrontal)", "date": "2026-11-12"},
+  "audit": {
+    "math": "verified line-by-line (Eq.1 free energy, symmetrized gradient, softmax-constant invariance, Lyapunov descent, PL objective)",
+    "timing_hit": "42ms is warm-run median vs cold-start baselines; honest cold-start likely 2-5s; order of magnitude robust",
+    "flops": "honest (all chains + failed searches, anchored to EBR)",
+    "baselines": "honest (dagger marks, TRMP reimplementation, no test-set selection)",
+    "scope": "completion-of-corrupted-pattern only; pairwise-only; App C-F partially unrecoverable - flagged",
+    "verdict": "sound math, honest experiments, one inflated timing protocol, title leads with inflated framing"
+  },
+  "estate_actions": {
+    "R1_reproduce_extend": "executed (this study)",
+    "R2_saturation_doctrine": "adopted",
+    "R3_energy_certificates": "adopted as pattern",
+    "R4_propose_then_relax": "roadmap, owner-gated GPU work",
+    "R5_designed_energy": "executed (r5_receipt.json)",
+    "R6_training_doctrine": "adopted (BPTT last resort)"
+  },
+  "r5_designed_energy": {
+    "problem": "gpu-bridge scheduling as graph coloring: 32 containers, 8 GPUs, 94 anti-affinity edges, degree 3",
+    "energy": "hand-set pairwise, 1 unique weight, 0 trained params",
+    "result": "E=0 conflict-free in 0.01s, certificate {answer, E_final, threshold, margin, sweeps} emitted",
+    "note": "feasibility demo of certificate pattern, not a stress test"
+  },
+  "setup": {
+    "hardware": "laptop CPU only (honest hardware)",
+    "stack": "python 3.12, numpy 2.5.4, pure-numpy reimplementation",
+    "data": "own dataset: 600 training solutions; 150 test puzzles dug to unique solutions, 24-27 clues (mean 24.6)",
+    "fit": "paper Eq.1/Table 1 priors: 9x9 cost per peer pair, free bias, digit augmentation, zero init, SGD+momentum+cosine",
+    "search_cfgA": "paper-style focused Gibbs, beta=1, 4 chains",
+    "search_cfgB": "MFA v2 (ours): beta-anneal 0.7->4, cross-chain per-cell quorum, focused-Gibbs polish, threshold early stop"
+  },
+  "search_machinery_honest_trail": {
+    "diag5": "single-script run killed by host event ~40min/1200CPU-s, no receipts; lesson: split + chunked receipts",
+    "diag5a_hand": {"exact_1_of_10": 1, "quorum_exact": 0, "sec": 56.56, "E_max": 7.0, "note": "digit-permutation symmetry"},
+    "diag5b_learned": {"fit_sec": 21.52, "thr": -239.54017639160156, "solE_test_mean": -242.69369506835938, "exact": 0, "quorum_exact": 0, "sec": 54.3, "E_best_mean": -235.0983428955078, "below_solutionE": 0},
+    "diag6_knobs_maxed": {"chains": 16, "beta_max": 12, "sweeps": 800, "polish": 300, "exact": 0, "gap_min": 4.03, "gap_max": 9.31, "near_miss_within_1": 0, "near_miss_within_3": 0, "conclusion": "annealing depth NOT the lever"},
+    "diag7_ils": {"rounds": 40, "kick_top6_conflict_cluster": true, "exact": 0, "gap_mean_start": 5.97, "gap_mean_end": 5.89, "conclusion": "descents return to same metastable shelf"},
+    "diag8_stability": {"single_flip_perturbations_of_true_solutions": 80, "returned_to_true_solution": 78, "pct": 97.5, "conclusion": "training GOOD; solutions strong attractors; failure is basin reachability"},
+    "diag9_clue_sensitivity": {"clues_28": {"exact": 0, "E_best_mean": -243.43}, "clues_30": {"exact": 0, "E_best_mean": -243.98}, "clues_32": {"exact": 1, "E_best_mean": -243.79}, "solE_mean": -242.69, "finding": "spurious deep minima BELOW threshold and BELOW solution energies while wrong; PL positives-only never penalizes decoys", "cosmetic_note": "diag9 quick valid field omitted box constraints; exact unaffected"},
+    "interp9": {"peer_pairs": 1620, "argmax_on_diagonal_frac": 1.0, "mean_diag_cost": 2.1119, "min_offdiag_cost": -0.5506, "finding": "off-diagonal REWARD entries = the decoy-minima substrate, mechanically confirming diag9"}
+  },
+  "results": {
+    "fit9_full": {"thr": -208.2499237060547, "thr60": -70.40059661865234, "thrh": 0.05000000074505806, "n_params": 131949, "sec": 13.3, "grid2_refit_sec": 7.606},
+    "cfgA_paper9": {"exact_pct": 0.0, "valid_pct": 0.0, "sec": 234.33, "boards": 150},
+    "cfgB9_mfa": {"exact_n": 1, "valid_n": 1, "n": 150, "exact_pct": 0.6667, "sec": 695.48},
+    "cfgB60_dataeff": {"exact_n": 0, "valid_n": 0, "n": 150, "sec": 161.84},
+    "interp9": {"argmax_on_diagonal_frac": 1.0, "peer_pairs": 1620, "mean_diag_cost": 2.1119, "min_offdiag_cost": -0.5506},
+    "handset9_mfa": {"exact_n": 13, "valid_n": 13, "n": 150, "exact_pct": 8.6667, "sec": 1032.01, "cfg": "MFA v2, hand-set 3-weight energy, threshold=0.05, pol_threshold=0.05"},
+    "handset9_gibbs": {"exact_n": 4, "valid_n": 4, "n": 150, "exact_pct": 2.6667, "sec": 97.6, "cfg": "focused Gibbs, hand-set 3-weight energy, chains=4, beta 0.7->4, 200 sweeps"},
+    "p16_scale": "pending: 16x16 dataset generator relaunched 2026-11-15 (gen16_only.py, PID 28676, BelowNormal, fresh seed 26111731; original gen16 died in host freeze); eval16_only.py ready; cell to fill when sudoku16.npz lands",
+    "grid2_note": "first grid killed ~10min into cfgB by host commit-memory exhaustion (parallel-lane processes); resume-aware chunked grid2 relaunched 2026-11-15T13:53Z after owner woke the box, completed stages with per-chunk receipts"
+  },
+  "pre_registered_expectations_vs_outcome": "expected hand-set ~100% and learned near-perfect; NEITHER held: learned best 0.67% (cfgB MFA v2, 1/150), hand-set probes 1-3/10; failure trail (diag5-9 + interp9) is the substantive finding: solutions are stable attractors but the PL-fit landscape contains rewarded off-diagonal entries -> spurious deep minima at solution depth; paper 99.996% must rely on unrecoverable fit details (contrastive negatives/priors) or App C search protocol",
+  "safety_rule": "grid_watch auto-launcher refused to launch learned-model grid run when learned did not validate (pre-registered rule; receipt grid_watch.json, decision learned_not_validated_no_launch)",
+  "artifacts": {"repo": "szl-holdings/szl-cram", "commit1": "dd4c9ee39259a65ab0765d09b3ae54798ac4b5e7 (2026-11-15T08:57Z)", "commit2": "TO_FILL", "hf_dataset": "SZLHOLDINGS/frontier-54-runs", "hf_path": "studies/cram-2611-17309/"},
+  "generated": "2026-11-15",
+  "doctrine": "honest-minimal; receipt-bound; no fabrication"
+}

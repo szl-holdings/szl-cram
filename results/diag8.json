@@ -1,0 +1,92 @@
+{
+  "thr": -239.54017639160156,
+  "puzzles": [
+    {
+      "q": 0,
+      "solE": -241.38,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -241.38,
+      "end_E_min": -241.38
+    },
+    {
+      "q": 1,
+      "solE": -242.37,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -242.37,
+      "end_E_min": -242.37
+    },
+    {
+      "q": 2,
+      "solE": -241.01,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -241.01,
+      "end_E_min": -241.01
+    },
+    {
+      "q": 3,
+      "solE": -243.22,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -243.22,
+      "end_E_min": -243.22
+    },
+    {
+      "q": 4,
+      "solE": -242.42,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -242.42,
+      "end_E_min": -242.42
+    },
+    {
+      "q": 5,
+      "solE": -242.16,
+      "flips": 8,
+      "returned": 6,
+      "end_E_mean": -240.67,
+      "end_E_min": -242.16
+    },
+    {
+      "q": 6,
+      "solE": -242.59,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -242.59,
+      "end_E_min": -242.59
+    },
+    {
+      "q": 7,
+      "solE": -243.77,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -243.77,
+      "end_E_min": -243.77
+    },
+    {
+      "q": 8,
+      "solE": -244.35,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -244.35,
+      "end_E_min": -244.35
+    },
+    {
+      "q": 9,
+      "solE": -243.65,
+      "flips": 8,
+      "returned": 8,
+      "end_E_mean": -243.65,
+      "end_E_min": -243.65
+    }
+  ],
+  "summary": {
+    "flip_returns": 78,
+    "total_flips": 80,
+    "return_rate": 0.975
+  },
+  "ok": true,
+  "t": "2026-11-15T09:27:13.621868+00:00"
+}

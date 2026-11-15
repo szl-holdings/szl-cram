@@ -1,4 +1,22 @@
 {
-  "stage": "start",
-  "t": "2026-11-15T08:10:29.709427+00:00"
+  "data": {
+    "n_train9": 600,
+    "n_test9": 150
+  },
+  "fit9_full": {
+    "fit_sec": 13.3,
+    "n_params": 131949,
+    "threshold": -208.2499237060547,
+    "train_E_mean": -213.80862426757812,
+    "train_E_std": 1.6792470216751099
+  },
+  "stage": "cfgA9",
+  "t": "2026-11-15T09:37:12.871368+00:00",
+  "cfgA_paper9": {
+    "exact": 0.0,
+    "valid": 0.0,
+    "search_sec": 234.33,
+    "quorum_exact": 0.0,
+    "quorum_valid": 0.0
+  }
 }

@@ -1,0 +1,31 @@
+{
+  "started": "2026-11-15T09:06:05.063533+00:00",
+  "events": [
+    {
+      "t": "2026-11-15T09:18:55.144839+00:00",
+      "decision": "learned_not_validated_no_launch"
+    }
+  ],
+  "diag5": {
+    "hand_mfa2": {
+      "exact": 1,
+      "quorum_exact": 0,
+      "n": 10,
+      "sec": 56.56,
+      "E_max": 7.0
+    },
+    "learned100_mfa2": {
+      "fit_sec": 21.52,
+      "thr": -239.54017639160156,
+      "solE_test_mean": -242.69369506835938,
+      "exact": 0,
+      "quorum_exact": 0,
+      "sec": 54.3,
+      "E_best_mean": -235.0983428955078,
+      "below_solutionE": 0
+    },
+    "ok": true,
+    "t": "2026-11-15T09:18:46.179887+00:00"
+  },
+  "decision": "learned_not_validated_no_launch"
+}
