@@ -53,7 +53,7 @@ Pure numpy 2.5.4, Python 3.12, laptop CPU only. Own data: 600 training solutions
 | Interpretability | argmax of learned cost on same-digit diagonal for **100% of 1,620 peer pairs** (the weights ARE the constraint tables); mean diag cost 2.1119; **min off-diagonal cost -0.5506 < 0 -> off-diagonal reward entries = the decoy-minima substrate** |
 | Hand-set saturation, MFA v2 (1 unique weight) | **13/150 exact (8.67%)**, 13/150 valid, 1032.01 s |
 | Hand-set saturation, focused Gibbs | **4/150 exact (2.67%)**, 4/150 valid, 97.60 s |
-| 16x16 scale probe | pending: generator relaunched 2026-11-15 (gen16_only.py, BelowNormal, fresh seed; original died in host freeze); eval16_only.py ready on the box; cell to fill when sudoku16.npz lands |
+| 16x16 scale probe | complete: learned cfgB exact 0.0, valid 0.0; hand-set exact 0.03333333333333333, valid 0.03333333333333333; receipt-bound 30-board probe; pattern-permuted scale-only data (not distribution-matched) |
 
 Honest frame: paper reports 99.996% on Sudoku-Extreme; our best honest configuration (MFA v2) lands 0.67% on equally extreme boards. The gap is explained (not excused) by the diagnostic trail below: our fit is faithful to the recoverable text; the paper's number depends on fit details or a search protocol that the released text does not fully specify (App. C-F gaps).
 
