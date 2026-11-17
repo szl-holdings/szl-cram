@@ -1,0 +1,2 @@
+# The canonical PyPI release gate is SHA-bound by szl-org-health; preserve LF bytes.
+/.github/scripts/szl_pypi_release_gate.py text eol=lf
