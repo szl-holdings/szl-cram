@@ -36,7 +36,7 @@ first publish. That is intended.
 Deploy workflow: `.github/workflows/deploy-cloudflare.yml` — tests first, deploys on
 main pushes, **fails closed** until the owner adds two repo-level secrets:
 
-1. Cloudflare dashboard → create an API Token scoped to Workers Scripts (account-level
+1. Cloudflare dashboard → create an API token scoped to Workers Scripts (account-level
    or repo-scoped per estate pattern).
 2. GitHub → szl-holdings/szl-cram → Settings → Secrets and variables → Actions →
    add `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`.
