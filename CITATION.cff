@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: "szl-cram: classical energy reasoning with certificates"
+message: >-
+  Szl-cram solves constraint-satisfaction problems with a hand-set
+  Hopfield-style energy and ships a machine-checkable energy certificate
+  on every answer. If you use the engine, datasets, or the audit results,
+  please cite this software and the CRAM paper it audits.
+type: software
+authors:
+  - family-names: Lutar
+    given-names: Stephen
+    email: stephen@szlholdings.com
+    affiliation: SZL Holdings
+repository-code: "https://github.com/szl-holdings/szl-cram"
+abstract: >-
+  Pure-numpy reimplementation, receipt-bound audit, and honest reproduction
+  of CRAM (arXiv:2611.17309): Hopfield-Tank pairwise constraint energies for
+  Sudoku-class reasoning, pseudolikelihood training, focused-Gibbs and
+  mean-field anneal search, an energy-certificate format for governance,
+  and a Cloudflare Worker edge solver. Includes the decoy-minima finding:
+  positives-only PL fits create spurious deep minima at solution depth
+  (min off-diagonal cost -0.5506).
+keywords:
+  - hopfield-networks
+  - constraint-satisfaction
+  - energy-based-models
+  - sudoku
+  - machine-learning-reproducibility
+license: Apache-2.0
+version: 0.1.0
+date-released: "2026-11-17"

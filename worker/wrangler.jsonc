@@ -1,0 +1,15 @@
+// SZL CRAM edge solver — Cloudflare Worker config.
+// Deploy only from a reviewed, merged commit via
+// .github/workflows/deploy-cloudflare.yml (fail-closed without repo secrets
+// CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID; see ops README in a11oy for
+// the estate pattern). Secrets: PRO_API_KEYS (comma list; unset => free tier
+// only), FREE_DAILY_QUOTA (default 20).
+{
+  "name": "szl-cram-solver",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-11-01",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true
+  }
+}

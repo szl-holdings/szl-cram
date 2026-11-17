@@ -1,0 +1,12 @@
+{
+  "name": "szl-cram-solver-worker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/index.test.mjs",
+    "build": "node --test test/index.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.68.0"
+  }
+}
