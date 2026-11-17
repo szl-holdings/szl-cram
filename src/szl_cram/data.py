@@ -50,7 +50,9 @@ def generate_solutions(n: int, box: int, count: int, seed: int = 0) -> np.ndarra
     out = []
     while len(out) < count:
         b = [-1] * N
-        order = sorted(range(N), key=lambda _: rng.random())
+        # Row-major fill: scattered random orders can hit catastrophic
+        # backtracking blowups (bad early assignment, detected only deep).
+        order = list(range(N))
 
         def place(k: int) -> bool:
             if k == N:
