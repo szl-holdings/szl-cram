@@ -31,12 +31,13 @@ def test_frontend_discloses_separate_corpora_and_failure():
 
 
 def test_energy_margin_not_admitted_as_correctness():
-    for path in (README, FRONTEND):
-        text = path.read_text(encoding="utf-8").lower()
-        assert "positive" in text
-        assert "not" in text
-        assert "proof" in text
-        assert "constraint" in text
+    readme = README.read_text(encoding="utf-8").lower()
+    frontend = FRONTEND.read_text(encoding="utf-8").lower()
+    assert "positive margin is not an independently checked" in readme
+    assert "correct sudoku solution" in readme
+    assert "positive energy margin is" in frontend
+    assert "not</b> proof of a correct solution" in frontend
+    assert "independent sudoku constraint validation" in frontend
 
 
 def test_retained_historical_failures_are_not_rewritten():
