@@ -53,7 +53,7 @@ def _hash(raw: bytes) -> str:
 
 def exact_gold(task: str, packet: dict) -> dict:
     """Separately recompute finite targets. Not Lean or archaeological proof."""
-    _require(type(packet) is dict and task in TASKS, "TASK_CONTRACT")
+    _require(type(packet) is dict and type(task) is str and task in TASKS, "TASK_CONTRACT")
     if task == "graph-energy":
         n = packet.get("nodes")
         colors = packet.get("candidate")
