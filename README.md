@@ -7,7 +7,7 @@ problems (Sudoku first) with a 1985-style Hopfield–Tank energy: **one hand-set
 zero trained parameters**, relaxation search, and a machine-checkable
 **energy certificate** `{answer, E_final, threshold, margin, sweeps, valid}` on every answer.
 
-It ships with a full, receipt-bound audit and reproduction of
+It ships a **bounded, receipt-backed independent reproduction attempt** of
 *CRAM: Classical Energies Learn to Reason 1,000× Faster than Looped Models*
 (arXiv:2611.17309, Hoover/Blayney/Whittington), plus the estate's frontier extensions.
 
@@ -32,14 +32,18 @@ szl-cram demo
 
 ## Why it matters (30-second version)
 
-- Benchmarked "reasoning" on Sudoku-class tasks is constraint propagation. A
-  Hopfield-style dynamical system captures it with **3–4 orders of magnitude less
-  compute** than looped Transformers. Our audit confirms the paper's core claim.
+- The authors report large compute reductions on selected Sudoku/Maze tasks using
+  learned classical energies. **Our independent CPU/NumPy attempt did not reproduce
+  their accuracy** (learned 1/150 on our different 150-board set). Its timing,
+  hardware, puzzle distribution and search are not controlled matches to the
+  original experiment; we cannot claim a SZL 1,000× speedup.
 - Hand-set ≤3-weight energies saturate many benchmarks. **That is a benchmark critique,
   not a product claim** — we publish the failures with the wins (see the table below).
-- The energy certificate is the durable idea: a cheap, verifiable proof object
-  `{answer, E_final, threshold, margin}` for any relaxation-based solver. Designed for
-  deny-by-default governance: no certificate, no commit.
+- The energy certificate is the durable idea: a machine-readable witness
+  `{answer, E_final, threshold, margin, sweeps, valid}` for a relaxation-based
+  solver. **A low energy or positive margin is not an independently checked
+  correct Sudoku solution.** Require an external hard-constraint checker and a
+  trusted source/receipt before promoting any solve. No certificate, no claim.
 
 ## Honest results (receipted, all in `results/`)
 
@@ -57,9 +61,10 @@ Key audit findings (full trail in `STUDY.md`):
 
 1. **The math is sound.** Energy, pseudolikelihood gradients, and baselines all verify
    line-by-line against the paper.
-2. **One real audit hit:** the paper's "42 ms training" is a warm-run in-process median
-   compared against cold-start baselines. Honest cold-start is ~2–5 s. The speedup's
-   *order of magnitude* survives; the headline number does not.
+2. **Timing-method discrepancy:** the paper's "42 ms training" is reported as a
+   warm-run in-process median compared with cold-start baselines. An estimated
+   **2–5 s cold start** is from our historical analysis, not a matched rerun on
+   the original hardware. We do not certify a cross-system speedup.
 3. **Solutions are strong attractors** (diag8: 78/80 perturbed solutions relax back), but
    **positives-only PL fits create spurious deep minima at solution depth** (diag9) with
    off-diagonal reward entries (interp9: min off-diagonal cost **−0.5506**). This decoy
@@ -99,8 +104,9 @@ cd worker && npm install && npm test && npx wrangler dev
 - **PyPI**: canonical estate path — bump version on main, tag `v<version>` + release;
   `publish-pypi.yml` builds, gates (`szl_pypi_release_gate.py`), and publishes via
   GitHub OIDC trusted publishing with PEP 740 attestations. See `docs/DEPLOYMENT.md`.
-- **Cloudflare**: `deploy-cloudflare.yml` tests then deploys the worker; fails closed
-  until the owner adds `CLOUDFLARE_API_TOKEN` / `CLOUDFLARE_ACCOUNT_ID` repo secrets.
+- **Cloudflare**: `deploy-cloudflare.yml` is a source-controlled deployment path;
+  current live serving and owner configuration remain separate admission evidence.
+  It must fail closed without authorized, scoped credentials.
 - **Hugging Face**: models (`model100.npz`, `grid2_models.npz`) and datasets
   (`sudoku9.npz`, `sudoku16.npz`) live under the SZLHOLDINGS org; see `docs/DEPLOYMENT.md`.
 
