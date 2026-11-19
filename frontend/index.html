@@ -47,7 +47,7 @@ code{background:#0b0e14;border:1px solid var(--line);border-radius:6px;padding:1
 <div class="wrap">
   <div class="hero">
     <h1>Reasoning by energy, not by loops.</h1>
-    <p>SZL CRAM solves Sudoku with a 1985-style constraint energy: <b>one hand-set weight, zero trained parameters</b>, relaxation search, and a machine-checkable <b>energy certificate</b> on every answer. This is our full audit and reproduction of <i>CRAM: Classical Energies Learn to Reason 1,000× Faster than Looped Models</i> (arXiv:2611.17309). Every number on this page is bound to a receipt.</p>
+    <p>SZL CRAM solves Sudoku with a 1985-style constraint energy: <b>one hand-set weight, zero trained parameters</b>, relaxation search, and a machine-checkable <b>energy certificate</b> on every answer. This is a source-backed but <b>not author-equivalent</b> reproduction attempt of <i>CRAM: Classical Energies Learn to Reason 1,000× Faster than Looped Models</i> (arXiv:2611.17309). The experiment figures below are taken from SZL&#39;s historical receipts; a site view does not independently replay them.</p>
     <div class="badges">
       <span class="badge">pip install szl-cram</span>
       <span class="badge">1 unique weight · 0 trained params</span>
@@ -58,7 +58,7 @@ code{background:#0b0e14;border:1px solid var(--line);border-radius:6px;padding:1
 
   <div class="cols">
     <div class="panel">
-      <h2 style="margin-top:0">Try it — solves in your browser</h2>
+      <h2 style="margin-top:0">Try the experimental solver in your browser</h2>
       <div class="grid" id="board"></div>
       <div class="btns">
         <button id="btnSolve">Solve (energy relaxation)</button>
@@ -79,7 +79,7 @@ code{background:#0b0e14;border:1px solid var(--line);border-radius:6px;padding:1
   "valid": null,
   "model": "handset-1w"
 }</pre>
-      <p class="small">The certificate is the product: <b>{answer, E_final, threshold, margin, sweeps}</b>. The threshold is fitted from solution energies, so a positive margin means "at least as good as a training solution". Cheap, tamper-evident, deny-by-default compatible. <span id="verdict"></span></p>
+      <p class="small">The certificate is a <b>claim-bearing observation</b>: {answer, E_final, threshold, margin, sweeps, valid}. A positive energy margin is <b>not</b> proof of a correct solution; require independent Sudoku constraint validation and authenticated receipt provenance before making a correctness claim. <span id="verdict"></span></p>
     </div>
   </div>
 
@@ -87,8 +87,8 @@ code{background:#0b0e14;border:1px solid var(--line);border-radius:6px;padding:1
   <div class="cols">
     <div>
       <p>The energy is the classical Hopfield–Tank mean-field free energy with pairwise couplings: same digit in a peer pair costs 1. That single rule <i>is</i> the model. No GPU, no backprop-through-time, no sampling in training — in fact, no training at all for this demo.</p>
-      <p>The paper's provocative claim — and our audit confirms it — is that benchmarked "reasoning" by modern looped Transformers on Sudoku-class tasks is just constraint propagation, re-learned slowly. A 1980s dynamical system captures it with 3–4 orders of magnitude less compute.</p>
-      <p><b>Our honest reproduction</b> on equally extreme boards (24–27 clues, unique solutions): the paper's learned model claims 99.996%; our faithful pure-numpy fit lands <b>0.67%</b> — and the failure trail is the real contribution: solutions are strong attractors (97.5% of perturbed solutions relax back), but <b>positives-only pseudolikelihood training rewards off-diagonal decoy entries</b> (min off-diagonal cost −0.5506), producing spurious deep minima at solution depth. Full trail: <a href="https://github.com/szl-holdings/szl-cram">szl-cram</a>.</p>
+      <p>The original authors report large compute savings on selected Sudoku/Maze tasks using learned classical energies. Our independent CPU implementation <b>did not reproduce the paper&#39;s reported accuracy</b>; its different puzzles, search implementation and hardware prevent a paired compute-speed comparison.</p>
+      <p><b>Our bounded reproduction attempt</b> on our own extreme boards (24–27 clues, unique solutions): the authors report 99.996% on their benchmark, whereas our independently implemented pure-NumPy fit obtained <b>1/150 (0.67%)</b> on a different dataset and setup. This is <b>not a matched head-to-head comparison</b> — and the failure trail is the real contribution: solutions are strong attractors (97.5% of perturbed solutions relax back), but <b>positives-only pseudolikelihood training rewards off-diagonal decoy entries</b> (min off-diagonal cost −0.5506), producing spurious deep minima at solution depth. Full trail: <a href="https://github.com/szl-holdings/szl-cram">szl-cram</a>.</p>
     </div>
     <div>
       <table>
@@ -99,7 +99,7 @@ code{background:#0b0e14;border:1px solid var(--line);border-radius:6px;padding:1
         <tr><td>Hand-set, focused Gibbs</td><td>4/150 (2.67%)</td><td>98 s</td></tr>
         <tr><td>16×16 scale probe (30 boards)</td><td>learned 0/30 · hand-set 1/30</td><td>~430 s</td></tr>
       </table>
-      <p class="small">All receipted (cram_results.json, cram_results2.json, cram_results16.json). One audit hit on the paper: the "42 ms training" headline is a warm-run median vs cold-start baselines; honest cold-start is ~2–5 s — the speedup order of magnitude survives, the number doesn't.</p>
+      <p class="small">All receipted (cram_results.json, cram_results2.json, cram_results16.json). One timing-method caveat: the 42 ms training figure is a warm-run median compared with cold-start baselines. The 2–5 s cold-start figure in the SZL study is an estimate, not a matched original-hardware rerun; no cross-system speedup is qualified.</p>
     </div>
   </div>
 
