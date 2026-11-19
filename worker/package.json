@@ -7,6 +7,6 @@
     "build": "node --test test/index.test.mjs"
   },
   "devDependencies": {
-    "wrangler": "4.68.0"
+    "wrangler": "4.165.0"
   }
 }
