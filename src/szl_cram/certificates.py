@@ -72,7 +72,9 @@ def make_certificate(model, answer, E_final, threshold, valid,
         threshold=None if threshold is None else float(threshold),
         margin=margin,
         sweeps=int(model.last_sweeps if sweeps is None else sweeps),
-        valid=bool(valid),
+        # A caller-provided True is not independent evidence of board validity.
+        # This checks Sudoku rules only; original puzzle givens are unavailable here.
+        valid=bool(valid) and board_valid(ans, model.n, model.box),
         model=model_id,
         n=model.n,
         box=model.box,
