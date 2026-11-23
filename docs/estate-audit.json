@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "repo_name": "szl-cram",
+    "last_audit_date": "2026-11-23",
+    "loop_level": 1
+  },
+  "estate_context": {
+    "purpose_domain": "Pure-numpy constraint-satisfaction package, edge worker, and API focused on Sudoku, using a hand-set Hopfield-Tank energy with no trained parameters and emitting machine-checkable energy certificates; it also records a bounded, receipt-backed independent reproduction attempt of CRAM.",
+    "baseline_commit": "c164431a17bf46372b9871f307f5c1e231315098",
+    "leader_profiles": [
+      {
+        "name": "Hoover/Blayney/Whittington (CRAM: Classical Energies Learn to Reason)",
+        "url": "https://arxiv.org/abs/2611.17309",
+        "checked_date": "2026-11-23"
+      },
+      {
+        "name": "google/or-tools",
+        "url": "https://github.com/google/or-tools",
+        "checked_date": "2026-11-23"
+      }
+    ]
+  },
+  "evidence_index": {
+    "publications": [
+      {
+        "id": "arXiv:2611.17309",
+        "link": "https://arxiv.org/abs/2611.17309",
+        "applicability": "CRAM: Classical Energies Learn to Reason, by Hoover/Blayney/Whittington, is the paper this repository reproduces in a bounded, receipt-backed independent attempt."
+      },
+      {
+        "id": "github:google/or-tools",
+        "link": "https://github.com/google/or-tools",
+        "applicability": "Assigned constraint-solving leader relevant to the repository's constraint-satisfaction problem domain."
+      }
+    ],
+    "gap_register": [
+      "The file inventory includes multiple root-level diagnostic scripts and result or receipt JSON files, but it does not show their corresponding L1 validation or provenance relationships.",
+      "The workflow inventory contains both publish-pypi.yml and pypi-publish.yml, making their distinct responsibilities an L1 item to establish.",
+      "The baseline commit c164431a17bf46372b9871f307f5c1e231315098 is a domain leader study card commit, but the listed documentation is not mapped to specific code, tests, receipts, or workflows.",
+      "pyproject.toml and tests/ are measured present, but the supplied L1 inventory does not identify test coverage or CI execution details for the reproduction artifacts and frontier extensions."
+    ],
+    "prioritized_changes": [
+      "Map the diagnostic scripts and result or receipt JSON files to their relevant documentation, tests, and provenance records to address the first gap.",
+      "Document the distinct responsibilities of publish-pypi.yml and pypi-publish.yml and align them with the publishing documentation to address the second gap.",
+      "Create an L1 traceability index linking the leader study and reproduction claims to code, tests, receipts, and CI execution, addressing the third and fourth gaps."
+    ]
+  },
+  "execution_trace": {}
+}
