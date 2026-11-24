@@ -11,8 +11,12 @@ It ships a **bounded, receipt-backed independent reproduction attempt** of
 *CRAM: Classical Energies Learn to Reason 1,000× Faster than Looped Models*
 (arXiv:2611.17309, Hoover/Blayney/Whittington), plus the estate's frontier extensions.
 
+In an active Python 3.11 or newer virtual environment, install from source and run the demo.
+
 ```bash
-pip install szl-cram
+git clone https://github.com/szl-holdings/szl-cram
+cd szl-cram
+python -m pip install .
 python -c "from szl_cram import CramSudoku; m=CramSudoku(9,3); m.set_hand(); print('ready: 1 unique weight, 0 trained params')"
 szl-cram demo
 ```
